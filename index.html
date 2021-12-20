@@ -1,49 +1,85 @@
 <!DOCTYPE html>
-<!--<html lang="china">-->
+<html lang="en">
 <head>
-    <meta name="color-scheme" content="dark light">
+    <meta charset="UTF-8">
+    <title>Title</title>
     <style>
-        fieldset {
-            background-color: gainsboro;
+        header
+        {
+            font-family: 'Lobster', cursive;
+            text-align: center;
+            font-size: 25px;
         }
-        @media (prefers-color-scheme: light) {
-            fieldset{
-                background-color: red;
-            }
-            p{
-                color: black;
-            }
-            body{
-                background-color: blue;
-            }
+
+        a{
+            color: #074E8C;
         }
-        @media (prefers-color-scheme: dark) {
-            fieldset {
-                background-color: blue;
-            }
-            p{
-                color: red;
-            }
-            /*body{*/
-            /*  background-color: #ffd200;*/
-            /*}*/
+
+        .scrollbar
+        {
+            margin-left: 30px;
+            float: left;
+            height: 300px;
+            width: 65px;
+            background: #F5F5F5;
+            overflow-y: scroll;
+            margin-bottom: 25px;
+        }
+
+        .force-overflow
+        {
+            min-height: 450px;
+        }
+
+        #div1{
+            display: block;
+            background-image: repeating-linear-gradient(red,green,blue);
+            background-repeat: repeat;
+            height: 1000px;
+            width: 1000px;
+        }
+        #div2{
+            height: 1000px;
+            width: 1000px;
+            display: inline-block;
+            background-image: url("https://img2.baidu.com/it/u=3872852428,1922506070&fm=26&fmt=auto") ;
+            background-repeat: repeat;
+        }
+        #style-1::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+
+        #style-1::-webkit-scrollbar
+        {
+            width: 10px;
+            height: 10px;
+            background-color: #F5F5F5;
+        }
+
+        #style-1::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #555;
         }
     </style>
 </head>
 <body>
-<p>
-    啥打法上范德萨范德萨范德萨范德萨
-</p>
+<div>
+    <div id="div1">
+        helloworld
+    </div>
+    <div class="scrollbar" id="style-1">
+        <div class="force-overflow">
 
-<form>
-    <fieldset>
-        <legend>Lorem ipsum</legend>
-        <button type="button">Lorem ipsum</button>
-    </fieldset>
-</form>
+        </div>
+    </div>
+    <div id="div2">
 
-
-
-<p>HelloWOrld</p>
+    </div>
+</div>
 </body>
 </html>
